@@ -1,0 +1,147 @@
+
+.ImageBg{
+  background-image: url('../LoginRegis/news-1172463.jpg');
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.wrapper {
+    position: relative;
+    width: 420px;
+    height: 500px; /* Adjusted height for better form fit */
+    background: transparent;
+    border:rgba(255, 255, 255, 0.1);
+    backdrop-filter:blur(15px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    color: black;
+    display: flex;
+    align-items: center;
+    overflow: hidden; /* Prevent form content overflow */
+  }
+  
+  .wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+    position: absolute; /* Position absolute for easy form sliding */
+  }
+  
+  .wrapper .form-box.login {
+    transition: transform 0.3s ease;
+    transform: translateX(0);
+  }
+  
+  .wrapper.active .form-box.login {
+    transform: translateX(-400px); /* Slide the login form out to the left */
+  }
+  
+  .wrapper .form-box.register {
+    transform: translateX(400px); /* Initially, keep register form off-screen to the right */
+    transition: transform 0.3s ease;
+  }
+  
+  .wrapper.active .form-box.register {
+    transform: translateX(0); /* Bring the register form into view */
+  }
+  
+  form h1 {
+    display: flex;
+    font-size: 36px;
+    justify-content: center;
+  }
+  
+  form .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+  }
+  
+  .input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 40px;
+    font-size: 16px;
+    color:black;
+    padding: 0 45px 0 20px;
+  }
+  
+  .input-box input::placeholder {
+    color:black;
+  }
+  
+  .input-box .icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+  }
+  
+  form .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+  }
+  
+  .remember-forgot label input {
+    accent-color: #090909;
+    margin-right: 4px;
+  }
+  
+
+ 
+  
+  .remember-forgot a {
+    color:brown;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .remember-forgot a:hover {
+    text-decoration: underline;
+  }
+
+
+  
+  form button {
+    width: 100%;
+    height: 45px;
+    background: rgb(97, 95, 95);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    font-weight: 700;
+  }
+  
+  form .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+  }
+  
+  .register-link p a {
+    color:brown;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .register-link p a:hover {
+    text-decoration: underline;
+  }
+  
